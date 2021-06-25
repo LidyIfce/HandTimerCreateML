@@ -24,7 +24,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     var timer = Timer()
     var fractions: Int = 60
-    var seconds: Int = 60
+    var seconds: Int = 59
     var minutes: Int = 2
     
     var timerStarted: Bool = false
@@ -148,7 +148,7 @@ extension ViewController {
                     self.timer.invalidate()
                     
                     self.fractions = 60
-                    self.seconds = 60
+                    self.seconds = 59
                     self.minutes = 2
                     
                     self.timerStarted = false
@@ -158,7 +158,7 @@ extension ViewController {
                     self.timer.invalidate()
                     
                     self.fractions = 60
-                    self.seconds = 60
+                    self.seconds = 59
                     self.minutes = 5
                     
                     self.timerStarted = false
