@@ -25,7 +25,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var timer = Timer()
     var fractions: Int = 60
     var seconds: Int = 60
-    var minutes: Int = 2
+    var minutes: Int = 1
     
     var timerStarted: Bool = false
     
@@ -149,7 +149,7 @@ extension ViewController {
                     
                     self.fractions = 60
                     self.seconds = 60
-                    self.minutes = 2
+                    self.minutes = 1
                     
                     self.timerStarted = false
                     self.timerLabel.text = "02:00:00"
@@ -159,7 +159,7 @@ extension ViewController {
                     
                     self.fractions = 60
                     self.seconds = 60
-                    self.minutes = 5
+                    self.minutes = 4
                     
                     self.timerStarted = false
                     self.timerLabel.text = "05:00:00"
