@@ -83,20 +83,20 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     @objc func decrementTimer(){
         fractions -= 1
         
-        if fractions == 0 {
+        if fractions == 0 && seconds == 0 && minutes == 0 {
+            timer.invalidate()
+            self.timerLabel.text = "00:00:00"
+        }
+        
+        if fractions == 0 && seconds != 0 {
             fractions = 60
             seconds -= 1
             
         }
         
-        if seconds == 0 {
+        if seconds == 0 && minutes != 0 {
             minutes -= 1
-            seconds = 60
-        }
-        
-        if minutes == 0 {
-            timer.invalidate()
-            self.timerLabel.text = "00:00:00"
+            seconds = 59
         }
         
         
